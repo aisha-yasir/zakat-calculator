@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+<main class="max-w-7xl mx-auto p-10">
+    <h1 class="text-3xl font-bold mb-10">Assalamu Alaikum, <span class="text-emerald-600">{{ user.username }}</span></h1>
+
+    <div class="bg-white rounded-[30px] shadow-sm border border-slate-100 overflow-hidden">
+        {% if history %}
+            <div class="p-8 border-b font-bold text-xl text-slate-800">Calculation History</div>
+            <table class="w-full text-left">
+                <thead class="bg-slate-50 text-slate-400 text-xs font-bold uppercase">
+                    <tr>
+                        <th class="px-8 py-4">Date</th>
+                        <th class="px-8 py-4">Total Wealth</th>
+                        <th class="px-8 py-4">Zakat Due (2.5%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+    {% for item in history %}
+    <tr class="border-t hover:bg-slate-50 transition">
+    <td class="px-8 py-4 text-slate-600">{{ item.date|date:"M d, Y" }}</td>
+    
+    <td class="px-8 py-4 font-medium">
+        {{ item.cash }} <span class="text-xs text-slate-400">{{ item.currency }}</span>
+    </td>
+    
+    <td class="px-8 py-4 font-black text-emerald-600">
+        {{ item.zakat_amount }} <span class="text-xs">{{ item.currency }}</span>
+    </td>
+</tr>
+    {% endfor %}
+</tbody>
+            </table>
+        {% else %}
+            <div class="p-20 text-center">
+                <i data-lucide="database" class="w-16 h-16 mx-auto text-slate-200 mb-4"></i>
+                <h3 class="text-xl font-bold text-slate-400">No History Yet</h3>
+                <a href="{% url 'calculator' %}" class="mt-4 inline-block bg-emerald-600 text-white px-8 py-3 rounded-xl font-bold">Start First Calculation</a>
+            </div>
+        {% endif %}
+    </div>
+</main>
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block title %}FAQ | ZakatTech Support{% endblock %}
+
+{% block content %}
+<div class="max-w-3xl mx-auto py-20 px-6">
+    <h1 class="text-4xl font-black text-slate-900 mb-4 text-center">Frequently Asked Questions</h1>
+    <p class="text-center text-slate-600 mb-12">Clear answers for your business Zakat compliance.</p>
+
+    <div class="space-y-4">
+        <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+            <button onclick="toggleFaq(1)" class="w-full text-left p-6 font-bold text-slate-800 flex justify-between items-center hover:bg-slate-50 transition">
+                <span>What is the difference between Zakatable and Non-Zakatable assets?</span>
+                <span id="icon-1" class="text-emerald-600 text-xl">+</span>
+            </button>
+            <div id="ans-1" class="hidden p-6 pt-0 text-slate-600 border-t border-slate-100 bg-slate-50/50">
+                Zakatable assets are those that are "productive" or liquid, such as cash, gold, silver, and inventory intended for sale. Non-Zakatable assets include items for use, such as factory machinery, office buildings, delivery trucks, and furniture.
+            </div>
+        </div>
+
+        <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+            <button onclick="toggleFaq(2)" class="w-full text-left p-6 font-bold text-slate-800 flex justify-between items-center hover:bg-slate-50 transition">
+                <span>How do I handle trade receivables (debts owed to the business)?</span>
+                <span id="icon-2" class="text-emerald-600 text-xl">+</span>
+            </button>
+            <div id="ans-2" class="hidden p-6 pt-0 text-slate-600 border-t border-slate-100 bg-slate-50/50">
+                According to the majority of scholars, strong debts (money you are confident will be paid) should be included in your Zakatable total. Weak debts (bad debts you expect to lose) can be excluded until they are actually received.
+            </div>
+        </div>
+
+        <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+            <button onclick="toggleFaq(3)" class="w-full text-left p-6 font-bold text-slate-800 flex justify-between items-center hover:bg-slate-50 transition">
+                <span>Is Zakat calculated on gross revenue or net wealth?</span>
+                <span id="icon-3" class="text-emerald-600 text-xl">+</span>
+            </button>
+            <div id="ans-3" class="hidden p-6 pt-0 text-slate-600 border-t border-slate-100 bg-slate-50/50">
+                Zakat is calculated on your "Zakatable Pool" (Cash + Inventory + Receivables) minus your immediate/short-term business liabilities. It is not a tax on your total revenue, but on your net surplus wealth held for one lunar year.
+            </div>
+        </div>
+
+        <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+            <button onclick="toggleFaq(4)" class="w-full text-left p-6 font-bold text-slate-800 flex justify-between items-center hover:bg-slate-50 transition">
+                <span>What is the current Nisab value used?</span>
+                <span id="icon-4" class="text-emerald-600 text-xl">+</span>
+            </button>
+            <div id="ans-4" class="hidden p-6 pt-0 text-slate-600 border-t border-slate-100 bg-slate-50/50">
+                Nisab is usually calculated based on the value of 85 grams of gold or 595 grams of silver. ZakatTech uses a conservative gold-based threshold (approx. $6,450) to ensure compliance, though users should check local current rates for extreme precision.
+            </div>
+        </div>
+
+        <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+            <button onclick="toggleFaq(5)" class="w-full text-left p-6 font-bold text-slate-800 flex justify-between items-center hover:bg-slate-50 transition">
+                <span>Can I deduct long-term business loans?</span>
+                <span id="icon-5" class="text-emerald-600 text-xl">+</span>
+            </button>
+            <div id="ans-5" class="hidden p-6 pt-0 text-slate-600 border-t border-slate-100 bg-slate-50/50">
+                Generally, only the upcoming year's installments (short-term portion) of a long-term loan are deductible from your Zakatable assets. The entire capital of a multi-year loan is typically not deducted all at once.
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleFaq(id) {
+        const ans = document.getElementById('ans-' + id);
+        const icon = document.getElementById('icon-' + id);
+        if (ans.classList.contains('hidden')) {
+            ans.classList.remove('hidden');
+            icon.innerText = "-";
+        } else {
+            ans.classList.add('hidden');
+            icon.innerText = "+";
+        }
+    }
+</script>
+{% endblock %}

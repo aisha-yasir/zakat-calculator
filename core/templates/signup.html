@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="flex-grow flex items-center justify-center px-6 py-12">
+    <div class="max-w-4xl w-full grid grid-cols-1 md:grid-cols-2 bg-white rounded-[40px] shadow-2xl overflow-hidden border border-slate-100">
+        
+        <div class="bg-emerald-900 p-12 text-white flex flex-col justify-center">
+            <h2 class="text-3xl font-bold mb-4">Join the Mission.</h2>
+            <p class="text-emerald-200 leading-relaxed">Ensure your business wealth is purified with the highest level of accuracy and trust (Amanah).</p>
+            <div class="mt-10 p-6 bg-white/10 rounded-2xl border border-white/10">
+                <p class="text-sm italic text-emerald-100">"The best of people are those that are most useful to people."</p>
+            </div>
+        </div>
+
+        <div class="p-12">
+            <h3 class="text-2xl font-black text-slate-900 mb-8">Create Enterprise Account</h3>
+            
+       <form method="POST" class="space-y-4">
+    {% csrf_token %}
+    
+    <div class="space-y-4">
+        {{ form.as_p }}
+    </div>
+
+    <div class="flex items-start space-x-3 py-4">
+        <input type="checkbox" name="terms_agree" id="terms" class="mt-1 w-4 h-4 text-emerald-600 border-gray-300 rounded focus:ring-emerald-500" required>
+        <label for="terms" class="text-sm text-slate-600">
+            I agree to the <a href="{% url 'terms' %}" class="text-emerald-600 font-bold underline">Terms of Service</a> and acknowledge that Zakat calculation is a spiritual responsibility.
+        </label>
+    </div>
+
+    <button type="submit" class="w-full bg-slate-900 text-white py-4 rounded-xl font-bold text-lg hover:bg-emerald-600 transition shadow-lg">
+        Register Enterprise
+    </button>
+</form>
+            <p class="mt-6 text-center text-sm text-slate-600">
+                Already have an account? <a href="{% url 'login' %}" class="text-emerald-600 font-bold">Sign In</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* This makes Django's default form fields look like your Tailwind inputs */
+    input {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #e2e8f0;
+        border-radius: 0.75rem;
+        outline: none;
+    }
+    input:focus {
+        border-color: #10b981;
+        box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.1);
+    }
+    /* Update your style tag at the bottom like this */
+input[type="text"], 
+input[type="password"], 
+input[type="email"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    outline: none;
+    margin-bottom: 1rem;
+}
+</style>
+{% endblock %}

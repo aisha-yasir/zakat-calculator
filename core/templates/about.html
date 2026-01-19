@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+
+{% block title %}About Us | ZakatTech Mission{% endblock %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto py-20 px-6">
+    <div class="text-center mb-16">
+        <h1 class="text-5xl font-black text-slate-900 mb-6">The Story of ZakatTech</h1>
+        <p class="text-xl text-emerald-700 font-medium italic">"Restoring Amanah to Corporate Wealth Purification"</p>
+    </div>
+
+    <div class="space-y-12">
+        <section class="bg-slate-50 p-10 rounded-[40px] border border-slate-100">
+            <h2 class="text-2xl font-bold mb-4 text-slate-900">Why I Built This</h2>
+            <p class="text-slate-700 leading-relaxed mb-4">
+                My name is <strong>Aisha Yasir</strong>. I built ZakatTech because I saw a recurring problem: Muslim business owners were struggling with the complexity of modern accounting. 
+            </p>
+            <ul class="list-disc ml-6 text-slate-600 space-y-2">
+                <li>Most owners were overpaying because they didn't know how to deduct liabilities.</li>
+                <li>Others were underpaying because they forgot to include trade receivables.</li>
+                <li>Spreadsheets were prone to human error, risking the spiritual integrity of their Zakat.</li>
+            </ul>
+        </section>
+
+        <section class="prose prose-emerald max-w-none">
+            <h2 class="text-3xl font-bold text-slate-900">Scriptural Accuracy</h2>
+            <blockquote class="border-l-4 border-emerald-500 pl-6 py-4 bg-emerald-50 italic text-slate-800 my-8">
+                "Collect Zakat from their wealth in order to purify them and sanctify them with it." 
+                <span class="block text-sm font-bold mt-2">— Surah At-Tawbah 9:103</span>
+            </blockquote>
+
+            <div class="bg-slate-900 text-white p-8 rounded-2xl shadow-lg mb-8">
+                <p class="italic mb-4 leading-relaxed">
+                    "In that which is irrigated by rainfall, a tenth <strong>(10%)</strong> is due; in that which is irrigated by wells, a twentieth <strong>(5%)</strong> is due; and <strong>for silver/wealth, one-fortieth (2.5%) is due.</strong>"
+                </p>
+                <p class="text-emerald-400 font-bold text-sm tracking-wide">— Sahih Bukhari (Book 24, Hadith 534)</p>
+            </div>
+        </section>
+
+        <section class="py-10 border-t border-slate-100">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-slate-900">📖 Know Your Calculator</h2>
+                <p class="text-slate-500 mt-2">Think of Zakat as "cleaning" your wealth. Here is how to fill out your fields accurately.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="p-8 bg-white rounded-[32px] border border-slate-100 shadow-sm">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mb-4">
+                        <i data-lucide="wallet"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">1. Cash on Hand & Bank</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        <strong>What it is:</strong> Every single Rupee or Dollar you have right now. <br>
+                        <strong>Where to find it:</strong> Physical cash in your wallet, money under your mattress, and balances in your banking apps.
+                    </p>
+                </div>
+
+                <div class="p-8 bg-white rounded-[32px] border border-slate-100 shadow-sm">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mb-4">
+                        <i data-lucide="shopping-bag"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">2. Inventory (Market Value)</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        <strong>What it is:</strong> Items bought to sell for profit. <br>
+                        <strong>Important:</strong> Use the <strong>Current Selling Price</strong> (Market Value), not the original cost. <br>
+                        <span class="text-xs text-rose-500 font-bold uppercase">Exclude:</span> Shop furniture, vans, or equipment.
+                    </p>
+                </div>
+
+                <div class="p-8 bg-white rounded-[32px] border border-slate-100 shadow-sm">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mb-4">
+                        <i data-lucide="arrow-down-left"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">3. Net Receivables</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        <strong>What it is:</strong> "Your money" currently in someone else's pocket. <br>
+                        <strong>Examples:</strong> Money lent to friends or customers who have taken goods but haven't paid their bill yet.
+                    </p>
+                </div>
+
+                <div class="p-8 bg-white rounded-[32px] border border-slate-100 shadow-sm">
+                    <div class="w-12 h-12 bg-rose-50 text-rose-600 rounded-2xl flex items-center justify-center mb-4">
+                        <i data-lucide="arrow-up-right"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">4. Short-term Liabilities</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        <strong>What it is:</strong> "Money Out" items—debts you must pay soon. <br>
+                        <strong>Examples:</strong> Unpaid electricity bills, shop rent, or money owed to suppliers for inventory.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-emerald-600 p-10 rounded-[40px] text-white shadow-xl relative overflow-hidden">
+            <div class="relative z-10">
+                <h3 class="text-2xl font-bold mb-6 flex items-center">
+                    <span class="mr-3">👶</span> The Story of Little Omar’s Candy Shop
+                </h3>
+                <p class="mb-8 text-emerald-50 leading-relaxed">
+                    Imagine 10-year-old <strong>Omar</strong> runs a small candy stand. To calculate his Zakat, he looks at his business assets and debts:
+                </p>
+                
+                <div class="grid sm:grid-cols-2 gap-4 mb-8">
+                    <div class="bg-emerald-700/50 p-4 rounded-2xl border border-emerald-500/30">
+                        <p class="text-xs font-bold text-emerald-300 uppercase">Cash</p>
+                        <p class="font-medium">₹500 in his glass jar.</p>
+                    </div>
+                    <div class="bg-emerald-700/50 p-4 rounded-2xl border border-emerald-500/30">
+                        <p class="text-xs font-bold text-emerald-300 uppercase">Inventory</p>
+                        <p class="font-medium">10 chocolates (Sell price ₹100/ea) = ₹1,000.</p>
+                    </div>
+                    <div class="bg-emerald-700/50 p-4 rounded-2xl border border-emerald-500/30">
+                        <p class="text-xs font-bold text-emerald-300 uppercase">Receivables</p>
+                        <p class="font-medium">Ali owes him ₹10 for a lollipop.</p>
+                    </div>
+                    <div class="bg-emerald-700/50 p-4 rounded-2xl border border-emerald-500/30">
+                        <p class="text-xs font-bold text-emerald-300 uppercase">Liabilities</p>
+                        <p class="font-medium">Owes sister ₹200 for the table setup.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white/10 p-6 rounded-3xl border-2 border-white/20">
+                    <h4 class="font-bold text-emerald-200 mb-2 uppercase text-xs tracking-widest">The Calculation:</h4>
+                    <p class="text-2xl font-black">
+                        (₹500 + ₹1,000 + ₹10) - ₹200 = <span class="text-emerald-300 underline">₹1,310</span>
+                    </p>
+                    <p class="mt-4 text-sm text-emerald-100">
+                        If ₹1,310 is more than the Nisab, Omar pays <strong>2.5%</strong> of that amount. Simple!
+                    </p>
+                </div>
+            </div>
+            <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-emerald-500 rounded-full opacity-20"></div>
+        </section>
+
+        <section class="border-t pt-10 pb-20">
+            <h2 class="text-2xl font-bold mb-4 text-slate-900">Terms of Service</h2>
+            <div class="text-sm text-slate-500 space-y-4">
+                <p>1. <strong>Accuracy:</strong> ZakatTech provides calculations based on user-inputted data. Users are encouraged to verify final amounts with a qualified scholar for complex edge cases.</p>
+                <p>2. <strong>Privacy:</strong> We do not sell financial data. All synced ERP data is used solely for the purpose of Zakat calculation.</p>
+                <p>3. <strong>Compliance:</strong> By using this tool, you acknowledge that Zakat is an act of worship (Ibadah) and requires intention (Niyyah) at the time of payment.</p>
+            </div>
+        </section>
+    </div>
+</div>
+{% endblock %}

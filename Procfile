@@ -1,0 +1,1 @@
+web: gunicorn zakat_system.wsgi

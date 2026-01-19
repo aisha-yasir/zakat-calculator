@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}Terms & Privacy | ZakatTech{% endblock %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto py-20 px-6">
+    <h1 class="text-4xl font-black text-slate-900 mb-10">Legal & Privacy Policy</h1>
+    
+    <div class="space-y-10 text-slate-700 leading-relaxed">
+        <section>
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">1. Terms of Service</h2>
+            <p class="mb-4">By using ZakatTech, you agree that this tool is designed for <strong>estimation purposes</strong>. While we strive for 100% Shariah accuracy based on established Hadith, final religious obligations are between you and Allah (SWT).</p>
+            <ul class="list-disc ml-6 space-y-2">
+                <li>Users are responsible for the accuracy of the data they input (Cash, Inventory, etc.).</li>
+                <li>ZakatTech is not a financial auditing firm or a licensed tax advisor.</li>
+            </ul>
+        </section>
+
+        <section class="bg-emerald-50 p-8 rounded-3xl border border-emerald-100">
+            <h2 class="text-2xl font-bold text-emerald-900 mb-4">2. Privacy Policy (Amanah)</h2>
+            <p class="mb-4">We treat your financial data as a <strong>Trust (Amanah)</strong>. Here is how we handle your information:</p>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <h4 class="font-bold text-emerald-800">What we save:</h4>
+                    <p class="text-sm text-emerald-700">Calculated totals and history for your dashboard access.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-emerald-800">What we never do:</h4>
+                    <p class="text-sm text-emerald-700">We never sell your business data or share your balances with third parties.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">3. Accuracy & Compliance</h2>
+            <p>Our calculation uses the <strong>2.5% (one-fortieth)</strong> standard for liquid wealth. If your business deals with agricultural products or livestock, please consult a specific Zakat specialist, as different rates apply.</p>
+        </section>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<header class="pt-20 pb-20 px-6">
+    <div class="max-w-7xl mx-auto text-center">
+        <span class="bg-emerald-100 text-emerald-700 px-4 py-1 rounded-full text-sm font-bold uppercase tracking-widest">Amanah-Verified</span>
+        <h1 class="text-6xl font-black text-slate-900 mt-6 leading-tight">Precision Zakat-al-Maal <br>for <span class="text-emerald-600">Global Businesses.</span></h1>
+        <p class="text-xl text-slate-600 mt-6 max-w-2xl mx-auto">Eliminate calculation errors. Our Python-integrated logic ensures 100% Shariah compliance.</p>
+        <div class="mt-10 flex justify-center space-x-4">
+            <a href="{% url 'calculator' %}" class="bg-emerald-600 text-white px-10 py-4 rounded-2xl font-bold text-lg hover:shadow-2xl transition">Launch Calculator</a>
+        </div>
+    </div>
+</header>
+{% endblock %}
