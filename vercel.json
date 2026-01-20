@@ -1,14 +1,14 @@
 {
   "builds": [
     {
-      "src": "zakat_system/wsgi.py",
+      "src": "zakat-calculator/wsgi.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "zakat_system/wsgi.py"
+      "dest": "zakat-calculator/wsgi.py"
     }
   ]
 }
